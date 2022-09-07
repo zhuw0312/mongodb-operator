@@ -5,12 +5,12 @@
 * 增加超级用户
 > use admin
 > db.createUser({
-    user: "root",
-    pwd: "root123",
-    roles: [
-      { db: "admin", role: "root" }
-    ],
-    mechanisms: [
-       "SCRAM-SHA-1"
-    ]
-})
+>    user: "root",
+>    pwd: "root123",
+>     roles: [
+>      { db: "admin", role: "root" }
+>    ],
+> mechanisms: [
+>       "SCRAM-SHA-1"
+>    ]
+>})
