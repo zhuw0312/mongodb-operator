@@ -18,3 +18,12 @@
     ]
 })
 `
+
+* connect sharding
+
+`kubectl run -i --rm --tty pe --image=percona/percona-server-mongodb:5.0 --restart=Never -- mongo "mongodb://userAdmin:userAdmin123456@mongodb-shading-psmdb-mongos.<namespace name>.svc.cluster.local/admin?ssl=false"`
+
+* connect replia
+
+`kubectl run -i --rm --tty pe --image=percona/percona-server-mongodb:5.0 --restart=Never -- mongo "mongodb://userAdmin:userAdminPassword@my-cluster-name-rs0.<namespace name>.svc.cluster.local/admin?replicaSet=rs0&ssl=false"
+`
